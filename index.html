@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chennai Museum</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav_logos">
+                <a href="#">
+                    <img src="images/logo.png" alt="Museum Logo" class="nav_logo"/>
+                </a>
+                <a href="#">
+                    <img src="images/home.png" alt="Right Logo" class="nav_right_logo"/>
+                </a>
+            </div>
+            <div class="nav_menu_btn" id="menu_btn">
+                <i class="ri-menu-line"></i>
+            </div>
+            <ul class="nav_links" id="nav-links"> 
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#" id="about-us-link">ABOUT US</a></li>
+                <li><a href="#chennaimuseum" >CHENNAI MUSEUM</a></li>
+                <li><a href="#events">EVENTS</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="video-container">
+        <video class="video-slider" autoplay muted loop>
+            <source src="vide.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <h1>Welcome to Chennai Museum</h1>
+            <button id="take-tour-btn" class="take-tour-btn">Take a Tour</button>
+        </div>
+    </div>
+   <!-- chennai meuseum Section -->
+
+    <section id="chennaimuseum">
+        <h2>Chennai Museum</h2>
+        <div class="museum-content">
+            <img src="images/Government Museum_files/16576921282444.png" alt="Chennai Museum" class="museum-image">
+            <p class="museum-description">Discover the Chennai Museum, a treasure trove of art and culture. Established through the vision of the Madras Literary Society in 1846, the museum opened its doors in 1851 under the guidance of Dr. Edward Balfour. Initially located in the College of Fort St. George, the museum evolved over the years, moving to the Pantheon in 1854, where it thrived as a cultural hub. The museum's rich history reflects the dedication of its officers, who have tirelessly curated collections that preserve the heritage of our community. From its beginnings to the present day, the Chennai Museum has played a pivotal role in showcasing the region's diverse cultural legacy.</p>
+        </div>
+        <h3>Committee for the Museum</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Period</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Surgeon E. Balfour</td>
+                    <td>First Officer in-charge</td>
+                    <td>1851 - 1859</td>
+                </tr>
+                <tr>
+                    <td>Captain J. Mitchell</td>
+                    <td>Superintendent</td>
+                    <td>1859 - 1872</td>
+                </tr>
+                <tr>
+                    <td>Surgeon G. Bidie, C.I.E.</td>
+                    <td>Superintendent</td>
+                    <td>1872 - 1884</td>
+                </tr>
+                <tr>
+                    <td>Dr. Edgar Thurston, C.I.E.</td>
+                    <td>Superintendent</td>
+                    <td>1885 - 1908</td>
+                </tr>
+                <tr>
+                    <td>Dr. J.R. Henderson, C.I.E.</td>
+                    <td>Superintendent</td>
+                    <td>1908 - 1919</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+   <!-- Events Section -->
+    <section id="events" class="events-section">
+        <h2>Upcoming Events</h2>
+        <div class="events-container">
+            <div class="event">
+                <img src="images/e1.jpg" alt="Event 1 Poster" class="event-poster">
+                <h3>Event Title 1</h3>
+                <p>Date: October 30, 2024</p>
+                <p>Resource Person: Dr. John Doe</p>
+            </div>
+            <div class="event">
+                <img src="images/e2.jpeg" alt="Event 2 Poster" class="event-poster">
+                <h3>Event Title 2</h3>
+                <p>Date: November 15, 2024</p>
+                <p>Resource Person: Ms. Jane Smith</p>
+            </div>
+            <div class="event">
+                <img src="images/e3.jpg" alt="Event 3 Poster" class="event-poster">
+                <h3>Event Title 3</h3>
+                <p>Date: December 5, 2024</p>
+                <p>Resource Person: Mr. Alex Brown</p>
+            </div>
+        </div>
+    </section>
+   <!-- Contact Section -->
+
+    <section class="contact-section">
+        <div class="contact-content">
+            <div class="contact-image">
+                <img src="images/map.jpg" alt="Contact Us" />
+                <p>For directions, <a href="https://www.google.com/maps" target="_blank" class="click-here-btn">Click Here</a></p>
+            </div>
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <label >Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+<div id="popupMessage" class="popup" style="display: none;">
+    <div class="popup-content">
+        <p>Your response has been submitted. You will be notified soon regarding contact details. <span class="close" id="closePopup">&times;</span>
+        </p>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

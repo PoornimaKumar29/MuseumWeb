@@ -1,0 +1,291 @@
+
+@media(max-width:1399px){
+    h1.section_title {font-size: 40px;}
+    html:lang(ta) h1.section_title{font-size: 32px;}
+    .inner_zoology_content h1{font-size: 30px!important;}
+    html:lang(ta) .inner_zoology_content h1{font-size: 26px;}
+    .gallery_section  li:nth-child(4){margin-top: -270px!important;}
+    .gallery_section  li:nth-child(3){margin-top: -30px!important;}
+    .gallery_section  li:nth-child(5){margin-top: -170px!important;}
+    .gallery_section  li:last-child{margin-top: -30px!important;}
+    .about p:last-child{padding: 0;}
+    .director h6,.footer_menu h4 {font-size: 22px;}    
+    html:lang(ta) .director h6,html:lang(ta) .footer_menu h4{font-size: 20px;}
+    .gallery_section li{width: 350px;}
+    .gallery_section  li:nth-child(3){order:4}
+    .gallery_section  li:nth-child(4){order:3}
+    .art_section h2{font-size: 36px;}
+    html:lang(ta) .art_section  h2{font-size: 30px;}
+    .price { font-size: 72px;}
+    html:lang(ta) .price{font-size: 48px;}
+    .art_content{padding-left: 20px;}
+    .section_padding {padding: 60px 0px;}
+    .zoology_list .list_column { width: 240px;  margin: 0px 2px 30px;}
+    .detail_page table td, .detail_page table th {  padding: 15px 30px; }
+    .inner_gallery_title { font-size: 18px;}
+    html:lang(ta) .inner_gallery_title{font-size: 16px;}
+    .detail_page h2,.inner_page_title { font-size: 34px;}
+    html:lang(ta) .inner_page_title,html:lang(ta) .detail_page h2{font-size: 28px;}
+    table#theatre-table th{padding: 20px;font-size: 20px;}
+    html:lang(ta) table#theatre-table th{font-size: 18px;}
+   table#theatre-table td{font-size: 18px;padding: 20px;}
+   html:lang(ta) table#theatre-table td{font-size: 16px;}
+   .detail_page table th:first-child{width: unset;}
+   .pdf_downloadfile a{padding: 15px 70px 15px 15px;}
+   .ebook_title{font-size: 20px;max-width: 240px;}
+   html:lang(ta) .ebook_title{font-size: 18px;}
+   .banner_content{top: 25%;}
+   .distric_title{font-size: 25px;}
+   html:lang(ta) .distric_title{font-size: 22px;}
+   html:lang(ta)  h2{font-size: 34px;}
+   img.district_img{max-width: 480px;}
+}
+@media(max-width:1199px){    
+    img.district_img{max-width: 100%;}
+    .schedule_list li{padding: 0px 80px 0px 0px;background-size: 50px!important;margin: 40px auto 40px auto;}
+    .schedule_list li h6{ font-size: 24px;  margin-bottom: 5px;}
+    html:lang(ta) .schedule_list li h6{font-size: 18px}
+    .art_section  h1.section_title{margin-bottom: 10px!important;}
+    .director p{font-size: 16px;}
+    .director h6{font-size: 18px;}
+    .director_message p{font-size: 18px;}
+    html:lang(ta) .director_message p{font-size: 16px;}
+    .bottom_header ul.navbar-nav li a{font-size: 20px;margin: 10px 0px;}
+    .bottom_header{padding: 20px 0px 20px 40px!important;}
+    .bottom_header{max-width: 400px;}
+    .banner_content h2{font-size: 46px;}
+    html:lang(ta) .banner_content h2{font-size: 30px;}
+    .price { font-size: 58px;}
+    html:lang(ta) .price{font-size: 46px;}
+    .about p {font-size: 18px; line-height: 36px; padding: 30px 0px 15px 0px;}
+    html:lang(ta) .about p {font-size: 16px;}
+    .text_bg{background-size: cover!important;}
+   .inner_banner{ background-size: cover;}
+    h1.detail_title{font-size: 26px;}
+    html:lang(ta) h1.detail_title{font-size: 24px;}
+   .introduction_content{padding-right: 0px;}
+   .detail_page table td{font-size: 18px;}
+   html:lang(ta) .detail_page table  td{font-size: 16px;}
+   .detail_page table th { font-size: 22px;}
+   html:lang(ta) .detail_page table  th{font-size: 20px}
+   ul.inner_page_menu li a{font-size: 16px;}
+   ul.inner_page_menu { max-width: 280px;}
+   .zoology_list .list_column {  max-width: 250px;  margin: 0px 2px 30px;}
+   .zoology_list ,.amphibians_gallery h1{justify-content: center;}
+   ul.contact_address li, ul.contact_address li a{font-size: 20px;}
+   html:lang(ta) ul.contact_address li,html:lang(ta) ul.contact_address li a{font-size: 18px;}
+   .contact_location,.contact_call,.contact_mail{background-size: 60px;    padding: 15px 0px 15px 80px;}   
+   ul.contact_address li span{margin-bottom: 5px;}
+   .form-group.left{    width: 47%;}
+   .fs_thirty{font-size: 26px;}
+   html:lang(ta) .fs_thirty{font-size: 22px;}
+   .detail_page h3{font-size: 24px;}
+   .district_address .contact_location, .district_address .contact_mail, .district_address .contact_call,.pdf_downloadfile a{font-size: 18px;}
+   html:lang(ta) .pdf_downloadfile a{font-size: 16px}
+   .gallery_title {font-size: 24px;padding-top: 15px!important;}
+   .ebook_cat{padding: 0;}
+   .bottom_header li.location:after{display: none;}
+   .bottom_header .footer_menu { flex-direction: column;  }
+   html:lang(ta) .burger h1,html:lang(ta) .bottom_header ul.navbar-nav li a{font-size: 16px;}
+   .art_content img{max-width: 500px;}
+   .margintop{margin-top: 116px!important;}
+   .bottom_header{top:116px}
+   .footer.section_padding{padding: 40px 0px;}
+   .inner_section_padding{padding: 30px 0px;}
+   .events h4 {font-size: 20px;}
+   html:lang(ta) .events h4 {font-size: 18px;}
+}
+@media(max-width:991px){
+    .art_content img{max-width: 100%;}
+    .govt_logo{height: 50px;}
+    .gallery_section  li:nth-child(4),.gallery_section li:nth-child(3){margin-top: 0px!important;}
+    .gallery_section  li:nth-child(5),.gallery_section li:last-child{margin-top: 0px!important;}
+    .gallery_section .gallery_title{margin-bottom: 10px;}
+    h1.section_title {font-size: 32px;}
+    html:lang(ta) h1.section_title{font-size: 26px;}
+    .inner_zoology_content h1{font-size: 26px!important;}
+    html:lang(ta) .inner_zoology_content h1{font-size: 22px;}
+    .header_section .call{display: none;}
+    .bottom_header{top:98px}
+    .margintop{margin-top: 98px!important;}
+    h3{font-size: 22px;}
+    html:lang(ta)  h3{font-size: 18px;}
+    html:lang(ta)  h2{font-size: 26px;}
+    h2{font-size: 36px;}
+    .price { font-size: 46px;}
+    html:lang(ta) .price{font-size: 36px;}
+    .orange_btn{padding: 10px 25px;    font-size: 18px;}
+    html:lang(ta) .orange_btn{font-size: 16px}
+    .gallery_section li{margin-bottom: 30px!important;max-width:300px;width: 100%;}
+    .black_btn,.white_btn{font-size: 18px;padding: 10px 40px;}
+    html:lang(ta) .black_btn,html:lang(ta) .white_btn,html:lang(ta) .green_btn{font-size: 16px}
+    .director, .director_message{ padding-top: 0; }
+    .events h4 { font-size: 18px;}
+    html:lang(ta) .events h4 { font-size: 16px;}
+    .social_icons li{    margin: 15px 10px 0px;}
+    .footer_menu h4{font-size: 20px;}
+    .eng{    margin: 0px 0px 0px 10px;}
+    .art_content{padding-left: 0px;}
+    .art_section h2{font-size: 28px;}
+    html:lang(ta) .art_section h2{font-size: 24px;}   
+    .detail_page h2::after,.inner_page_title::after{display: none;}
+    .title_log { padding: 20px 0px 20px 65px!important;background-size: 55px;}
+    .inner_zology .gallery_title{font-size: 22px;}
+    html:lang(ta) .inner_zology .gallery_title, html:lang(ta) .gallery_title{font-size: 20px}
+    ul.inner_page_menu li a{    padding: 10px 10px 10px 25px;   }
+    .detail_page h2,.inner_page_title {font-size: 26px;}
+    html:lang(ta) .inner_page_title,html:lang(ta) .detail_page h2{font-size: 22px;}
+    .distric_title{font-size: 22px;}
+    html:lang(ta) .distric_title{font-size: 20px;}
+    .detail_page table td{font-size: 16px;}
+    html:lang(ta) .detail_page table  td{font-size: 14px;}
+    .detail_page table th{font-size: 18px;}
+    html:lang(ta) .detail_page table  th{font-size: 16px}
+    .detail_page table td, .detail_page table th{    padding: 5px 10px;}
+    ul.inner_page_menu {max-width: 260px;}
+    .children_img,.major_img{width: 100%;float: unset;}
+    ul.inner_page_menu li a::after,ul.inner_page_menu li a:hover::after, ul.inner_page_menu li a.active::after{background-position: 10px center;}
+    .form-group.left{width: 48%;}
+    .reach_us{margin-top: 40px;}
+    h1.detail_title{margin-top: 20px;margin-bottom: 5px!important;}
+    table#theatre-table th {padding: 10px; font-size: 18px; }
+    html:lang(ta) table#theatre-table th{font-size: 16px;}
+    table#theatre-table td { font-size: 16px;padding: 10px; }
+    html:lang(ta) table#theatre-table td{font-size: 14px;}
+    .row.odd .distric_box:nth-child(2),.row.even .distric_box:nth-child(2){border-right: 1px solid #ccc;}
+    .row.even .distric_box:nth-child(2), .row.even .distric_box:nth-child(3),.row.odd .distric_box:nth-child(2), .row.odd .distric_box:nth-child(3) {background: #f5f5f5; }
+    .row.even .distric_box:nth-child(1),.row.odd .distric_box:nth-child(4){background: #fff;}
+    .districtmuseum_box {height: 150px;}
+    .detail_page h3{font-size: 18px;}
+    .pdf:nth-child(odd) .book_list:first-child .pdficon_left{background: #00d765;}
+    .pdf:nth-child(odd) .book_list:nth-child(2) .pdficon_left{background: #00b369;}
+    .exibits_slider{margin-top: 40px;}
+    .districtmesumdetail .flex-direction-nav .flex-prev,.districtmesumdetail .flex-direction-nav a{position: relative!important;left: 0!important;right: 0!important;top: -7px!important;}
+    .districtmesumdetail .flex-direction-nav li{display: inline-block!important; margin: 0px 20px!important;padding-left: 0px;}
+    .districtmesumdetail .flex-direction-nav{    position: absolute!important;top: -30px!important;max-width: 180px!important;left: 0!important; right: 0!important; margin: auto!important;}
+    .gallery_section li img{height: auto!important;}
+}
+@media(max-width:767px){   
+    .banner_section video{height: 94vh!important;}
+    .logo_part{flex-direction: column-reverse;padding: 8px 0px 10px!important;}
+    .menu_section{justify-content: space-between;flex-direction: row-reverse;height: 30px;}
+    .res_menu{display: flex;width: 100%;justify-content: space-between;padding-top: 6px;flex-direction: column;}
+    .burger{border: 0px!important;width: 50px!important;height: 30px;padding: 10px 4px 7px 14px;}
+    .form-select{padding: 2px 12px 2px 0px;}
+    .banner_content{top: 30%;}
+    .banner_content h2{font-size: 26px;    margin-bottom: 10px!important;}
+    html:lang(ta) .banner_content h2{font-size: 22px;}
+    .art_section h2{font-size: 24px;}
+    html:lang(ta)  h2{font-size: 22px;}
+    html:lang(ta) .art_section  h2{font-size: 20px;}
+    h3 {font-size: 20px;}
+    h1.section_title{font-size: 30px;}
+    html:lang(ta) h1.section_title{font-size: 22px;}
+    .schedule_list li{margin: 30px auto 30px auto;}
+    .section_padding{  padding: 40px 0px;}
+    /* .about img{max-width:  320px;} */
+    .gallery_title,.director_message h4 { font-size: 24px;}
+    html:lang(ta) .director_message h4,html:lang(ta) .gallery_title{font-size: 20px;}
+    .schedule_list{margin-top: 50px;}
+    .sub_container{padding: 0px 30px;}
+    .history_content p{    margin: 15px 0px;}
+    .events span{    padding: 8px 0px 8px!important;}
+    .visit_us,html:lang(ta) .visit_us{max-width: unset;}
+    .visit_us li.location{padding: 0px 0px 10px 30px;}
+    .footer{padding:30px;}
+    img.main_logo{max-width: 300px; margin: 0px auto 10px;}
+    img.govt_logo{max-width: 200px;margin: 0px auto 0px;}
+    .sub_container { padding: 0px 20px;}  
+    .history_content{padding: 40px 40px;}
+    .res_main_logo,.res_logo{display: inline-block;}
+    .logo_title{color: #fff;font-size: 20px;display: inline-block;}
+    .main_logo,.govt_logo,.burger h1{display: none!important;}
+    .res_main_logo{width: 60px;height: 40px;}    
+    .res_logo { width: 250px;}
+    .eng{margin: 0;font-size: 14px;}
+    .fixed_box .box ,.fixed_box .book_box a{ height: 50px; width: 40px;}
+    .call_detail.open{right: 34px;}
+    .social_detail.open{right:35px;padding: 5px!important;}
+    .fixed_social_box{top:56px}
+    .call_detail { font-size: 15px;}
+    .detail_box{padding: 5px 10px;}
+    .eng,.form-select{text-transform: capitalize;}
+    .bottom_header{padding: 20px 0px 20px 30px!important;}
+    .bottom_header ul.navbar-nav li a{font-size: 17px;}
+    .bottom_header{top:80px}
+    .margintop{margin-top: 80px!important;}
+    .bottom_header{max-width: 300px;}
+    .price { font-size: 34px;} 
+    html:lang(ta) .price{font-size: 28px;}   
+    .inner_banner{height: 200px;}
+     h1.detail_title{font-size: 22px;}
+     html:lang(ta) h1.detail_title{font-size: 20px;}
+    .inner_zoology_content h1{font-size: 20px!important;}
+    html:lang(ta) .inner_zoology_content h1{font-size: 18px;}
+    .row.reverse{flex-direction: column-reverse;}
+    .detail_page h2,.inner_page_title{padding-bottom: 10px;}
+    .fixed{position: relative;    top: 0;}
+    ul.inner_page_menu{margin: auto;margin-top: 10px;width: 100%;top:0;position: relative;display: block;}
+    .inner_banner_title{font-size: 18px;}
+    html:lang(ta) .inner_banner_title{font-size: 16px;}
+    .contact_location, .contact_call, .contact_mail {background-size: 50px; padding: 15px 0px 15px 60px;  }
+    .form-group.right,.form-group.left{width: 47%;}
+    ul.contact_address li, ul.contact_address li a{font-size: 18px;}
+    html:lang(ta) ul.contact_address li,html:lang(ta) ul.contact_address li a{font-size: 16px;}
+    .fs_thirty{font-size: 22px;}
+    html:lang(ta) .fs_thirty{font-size: 20px;}
+    .inner_table{overflow: scroll;}
+    table#theatre-table {width: 680px;}
+    .inner_table::-webkit-scrollbar { display: none;  }
+    .row.odd .distric_box:nth-child(1),.row.even .distric_box:nth-child(1),.row.odd .distric_box:nth-child(3),.row.even .distric_box:nth-child(3){border-right: 1px solid #ccc;}
+    .row.even .distric_box:nth-child(3), .row.odd .distric_box:nth-child(3){background: #fff;}
+    .row.odd .distric_box:nth-child(4), .row.even .distric_box:nth-child(4){background: #f5f5f5;}
+    .e-publications .pdficon_left{padding: 8px;}
+    .call_detail a{background-size: 15px;padding-left: 20px;}
+    html:lang(ta) #booking-form.app-form .boxes h4, html:lang(ta) .bottom_header a,html:lang(ta) p.text_bg,html:lang(ta) .detail_page p,html:lang(ta) .detail_page_inner  li, html:lang(ta) .theatre p,html:lang(ta) .director p,html:lang(ta) .visit_us li{font-size: 16px;}
+    .e-books{padding: 0px 0px;}
+    #booking-form.app-form .boxes h4{font-size: 17px; padding: 8px 12px 6px;}
+    #booking-form.app-form input, #booking-form.app-form select{font-size:16px}
+}
+@media(max-width:575px){
+    .eventborderstyle { max-width: 400px; margin: auto;}
+}
+@media(max-width:479px){    
+    .fixed_box .call_box{background-size: 21px;}
+    aside .widget{margin-bottom: 0px!important;}
+    .banner_content h2{font-size: 22px;    margin-bottom: 10px!important;}
+    .price { font-size: 28px;}
+    .detail_page h3{margin-bottom: 15px!important;}
+    html:lang(ta) .price{font-size: 24px;}
+    h3 {font-size: 18px;margin-bottom: 5px!important;}
+    .sub_container { padding: 0px 10px;}   
+    h1.section_title{font-size: 26px;} 
+    .schedule_list li h6,.schedule_list li h6{font-size: 20px;}
+    .history_content{padding: 20px 40px;}
+    .footer{padding: 15px;}
+    .schedule_list li{margin: 30px auto 30px auto;padding: 0px 60px 0px 0px; background-size: 40px!important;max-width: 290px; }
+    .logo_title{font-size: 17px;}
+    .bottom_header{top:74px}    
+    .margintop{margin-top: 74px!important;}
+    .res_main_logo { width: 40px;  height: 30px;}
+    .inner_para,.detail_page p,.detail_page_inner li{font-size: 16px; line-height: 30px;}
+    .detail_page h2 ,.inner_page_title{font-size: 22px;}
+    html:lang(ta) .inner_page_title,html:lang(ta) .detail_page h2{font-size: 18px;}
+    .detail_page table td { font-size: 14px;}
+    html:lang(ta) .detail_page table  td{font-size: 13px;}
+    .title_log { padding: 8px 0px 12px 50px!important;background-size: 40px;}
+    .form-group.right,.form-group.left{width: 100%;margin: 0px 0px 20px 0px;}
+    .zoology_list .list_column { width: 280px;}
+    .pdf_downloadfile a{font-size: 15px;padding: 10px 42px 10px 15px;background-size: 30px;}
+    html:lang(ta) .pdf_downloadfile a{font-size: 13px}
+    .ebook_title {   max-width: 220px;}
+    a.screen_reader {font-size: 13px;padding:3px 0px 0px 22px}    
+    table.chennai-table th{word-break: break-all!important; font-size: 16px!important;}
+    table.chennai-table td{ word-break: break-all!important;   font-size: 15px!important;}
+    .DetailContent img{margin-left: 0;margin-right: 15px;}
+    .wthreec{font-size: 13px;background-size: 22px;padding-left: 24px;}
+}
+@media(max-width:374px){
+    .logo_title { font-size: 15px;padding-left: 3px; }
+    .eng .btn{font-size: 11px!important;}
+}

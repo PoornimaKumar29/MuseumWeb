@@ -1,0 +1,787 @@
+
+jQuery(document).ready(function(jQuery) {
+
+  
+    setTimeout(function () {
+    $(".videos .video_list" ).each(function() {
+        var url = $(this).find('iframe').attr('file-url');
+        
+        $(this).find('iframe.you-tube').attr('src', url);
+      });
+    }, 7000);
+
+
+      //flexslider image height 
+    $('.home_event').on('click',function(){
+        var modalid = $(this).attr('data-bs-target');
+        
+    $(modalid).on('shown.bs.modal', function(){
+        //$(this).find(' ul li:first-child img').height()
+        imgheight = $(modalid+' ul.slides li.flex-active-slide img').height();
+        $(modalid+' ul.slides').css('height',imgheight);    
+    });
+    $(modalid).on('hidden.bs.modal', function(){
+        //$(this).find(' ul li:first-child img').height()
+        imgheight = $(modalid+' ul.slides li.flex-active-slide" img').height();
+        $(modalid+' ul.slides').css('height','auto');    
+    });
+});
+    
+    //flexslider image height 
+    $('.even_slider.flexslider').flexslider({
+        after: function (slider) {
+               // alert(slider.currentSlide);
+        //alert(slider.slides[slider.currentSlide]);
+        var active_rel = $(slider.slides[slider.currentSlide]).find('img').height();
+        $(slider.slides[slider.currentSlide]).parents('.slides').css('height',active_rel);
+        //alert(active_rel);
+        },
+        
+    });
+     
+    
+       
+  
+    
+
+    $('.flexslider.exibits_slider').flexslider({
+        start: function (slider) {
+            // alert(slider.currentSlide);
+            //alert(slider.slides[slider.currentSlide]);
+            var active_list = $('.flexslider.exibits_slider ul.slides li.flex-active-slide').height();
+            $('.flexslider.exibits_slider').css('height',active_list);
+            $('.flexslider.exibits_slider ul.slides').css('height',active_list);
+            },
+        after: function (slider) {
+               // alert(slider.currentSlide);
+        //alert(slider.slides[slider.currentSlide]);
+        var active_list = $('.flexslider.exibits_slider ul.slides li.flex-active-slide').height();
+        $('.flexslider.exibits_slider').css('height',active_list);
+        $('.flexslider.exibits_slider ul.slides').css('height',active_list);
+        },
+        
+    });
+   
+
+    //Fixed box toogle class
+    jQuery(document).on('click' ,'.call_box',function(){       
+        jQuery('.call_detail').toggleClass('open');    
+      });      
+      jQuery(document).on('click', 'body', function(e) {
+        if (!jQuery(e.target).is('.call_box'))
+        jQuery('.call_detail.open').removeClass('open');
+      })
+      jQuery(document).on('click' ,'.lang_box',function(){       
+        jQuery('.social_detail').toggleClass('open');    
+      });
+      jQuery(document).on('click', 'body', function(e) {
+        if (!jQuery(e.target).is('.lang_box'))
+        jQuery('.social_detail.open').removeClass('open');
+      })
+
+      //scroll to top
+    jQuery(window).scroll(function(){
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery('.scrollup').fadeIn();
+        } else {
+            jQuery('.scrollup').fadeOut();
+        }
+    });
+     
+   
+    //menu
+      jQuery(document).on('click' ,'.burger',function(){
+        //  bottom_header
+          jQuery(this).toggleClass('menuopend');
+          jQuery('.bottom_header').toggleClass('menuopend');     
+          jQuery('.bg_overley').toggleClass('menuopend');  
+        });  
+      //Close menu 
+      jQuery(document).on('click' ,'.bg_overley.menuopend',function(){
+        jQuery(this).removeClass('menuopend');
+        jQuery('.burger.menuopend').removeClass('menuopend')
+        jQuery('.bottom_header.menuopend').removeClass('menuopend')
+    }); 
+    
+    var $contentheight = jQuery('.detailpage_liststyle .row').height();
+    var $scrollheight = jQuery('.inner_page_menu').height();
+       if($contentheight > $scrollheight){  
+        if(jQuery('.inner_page_menu').length)
+       var stickyNavTop = jQuery('.inner_page_menu').offset().top-jQuery('header.sticky').height();
+         var stickyNav = function(){
+          var scrollTop = jQuery(window).scrollTop(); 
+          if (scrollTop > stickyNavTop) { 
+              jQuery('.inner_page_menu').addClass('fixed');
+          } else {
+              jQuery('.inner_page_menu').removeClass('fixed'); 
+          }
+      };
+      stickyNav();
+      jQuery(window).scroll(function() {
+        
+        stickyNav();
+      });
+       }
+      
+        //header include
+        jQuery(function () {
+          var includes = jQuery('[data-include]');
+          jQuery.each(includes, function () {
+              var file = 'views/' + jQuery(this).data('include');
+              jQuery(this).load(file);
+          });
+      });
+
+    //add some elements with animate effect
+
+    jQuery(".big-cta").hover(
+        function () {
+            jQuery('.cta a').addClass("animated shake");
+        },
+        function () {
+            jQuery('.cta a').removeClass("animated shake");
+        }
+    );
+    jQuery(".box").hover(
+        function () {
+        },
+        function () {
+            jQuery(this).find('.icon').removeClass("animated bounce");
+            jQuery(this).find('p').removeClass("animated bounce");
+            jQuery(this).find('h4').removeClass("animated bounce");
+            jQuery(this).find('.box-bottom').removeClass("animated pulse");
+            jQuery(this).removeClass("animated pulse");
+        }
+    );
+
+
+    jQuery('.accordion').on('show', function (e) {
+
+        jQuery(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
+        jQuery(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-plus');
+        jQuery(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-minus');
+    });
+
+    jQuery('.accordion').on('hide', function (e) {
+        jQuery(this).find('.accordion-toggle').not(jQuery(e.target)).removeClass('active');
+        jQuery(this).find('.accordion-toggle i').not(jQuery(e.target)).removeClass('icon-minus');
+        jQuery(this).find('.accordion-toggle i').not(jQuery(e.target)).addClass('icon-plus');
+    });
+
+
+    // tooltip
+    //jQuery('.social-network li a, .options_box .color a, .thumbnail img').tooltip();
+
+    // fancybox
+    jQuery(".fancybox").fancybox({
+        padding : 0,
+        autoResize: true,
+        beforeShow: function () {
+            this.title = jQuery(this.element).attr('title');
+            this.title = '<h4>' + this.title + '</h4>';
+        },
+        helpers : {
+            title : { type: 'inside' },
+        }
+    });
+
+
+   
+    // jQuery('.scrollup').click(function(){
+    //     jQuery("html, body").animate({ scrollTop: 0 }, 100);
+    //     return false;
+    // });
+    jQuery(".scrollup").on("click", function() {
+        jQuery("body").scrollTop(0);
+    });
+    jQuery('.p-slider').flexslider({
+        // Primary Controls
+        controlNav          : false,              //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+        directionNav        : true,              //Boolean: Create navigation for previous/next navigation? (true/false)
+        prevText            : "Previous",        //String: Set the text for the "previous" directionNav item
+        nextText            : "Next",            //String: Set the text for the "next" directionNav item
+
+        // Secondary Navigation
+        keyboard            : true,              //Boolean: Allow slider navigating via keyboard left/right keys
+        multipleKeyboard    : false,             //{NEW} Boolean: Allow keyboard navigation to affect multiple sliders. Default behavior cuts out keyboard navigation with more than one slider present.
+        mousewheel          : false,             //{UPDATED} Boolean: Requires jquery.mousewheel.js (https://github.com/brandonaaron/jquery-mousewheel) - Allows slider navigating via mousewheel
+        pausePlay           : false,             //Boolean: Create pause/play dynamic element
+        pauseText           : 'Pause',           //String: Set the text for the "pause" pausePlay item
+        playText            : 'Play',            //String: Set the text for the "play" pausePlay item
+
+        // Special properties
+        controlsContainer   : "",                //{UPDATED} Selector: USE CLASS SELECTOR. Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be ".flexslider-container". Property is ignored if given element is not found.
+        manualControls      : "",                //Selector: Declare custom control navigation. Examples would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
+        sync                : "",                //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
+        asNavFor            : "",                //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
+    });
+
+    jQuery('#main-slider').flexslider({
+        namespace           : "flex-",           //{NEW} String: Prefix string attached to the class of every element generated by the plugin
+        selector            : ".slides > li",    //{NEW} Selector: Must match a simple pattern. '{container} > {slide}' -- Ignore pattern at your own peril
+        animation           : "fade",            //String: Select your animation type, "fade" or "slide"
+        easing              : "swing",           //{NEW} String: Determines the easing method used in jQuery transitions. jQuery easing plugin is supported!
+        direction           : "horizontal",      //String: Select the sliding direction, "horizontal" or "vertical"
+        reverse             : false,             //{NEW} Boolean: Reverse the animation direction
+        animationLoop       : true,              //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
+        smoothHeight        : false,             //{NEW} Boolean: Allow height of the slider to animate smoothly in horizontal mode
+        startAt             : 0,                 //Integer: The slide that the slider should start on. Array notation (0 = first slide)
+        slideshow           : true,              //Boolean: Animate slider automatically
+        slideshowSpeed      : 7000,              //Integer: Set the speed of the slideshow cycling, in milliseconds
+        animationSpeed      : 600,               //Integer: Set the speed of animations, in milliseconds
+        initDelay           : 0,                 //{NEW} Integer: Set an initialization delay, in milliseconds
+        randomize           : false,             //Boolean: Randomize slide order
+
+        // Usability features
+        pauseOnAction       : true,              //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+        pauseOnHover        : false,             //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+        useCSS              : true,              //{NEW} Boolean: Slider will use CSS3 transitions if available
+        touch               : true,              //{NEW} Boolean: Allow touch swipe navigation of the slider on touch-enabled devices
+        video               : false,             //{NEW} Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
+
+        // Primary Controls
+        controlNav          : true,              //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+        directionNav        : true,              //Boolean: Create navigation for previous/next navigation? (true/false)
+        prevText            : "Previous",        //String: Set the text for the "previous" directionNav item
+        nextText            : "Next",            //String: Set the text for the "next" directionNav item
+
+        // Secondary Navigation
+        keyboard            : true,              //Boolean: Allow slider navigating via keyboard left/right keys
+        multipleKeyboard    : false,             //{NEW} Boolean: Allow keyboard navigation to affect multiple sliders. Default behavior cuts out keyboard navigation with more than one slider present.
+        mousewheel          : false,             //{UPDATED} Boolean: Requires jquery.mousewheel.js (https://github.com/brandonaaron/jquery-mousewheel) - Allows slider navigating via mousewheel
+        pausePlay           : false,             //Boolean: Create pause/play dynamic element
+        pauseText           : 'Pause',           //String: Set the text for the "pause" pausePlay item
+        playText            : 'Play',            //String: Set the text for the "play" pausePlay item
+
+        // Special properties
+        controlsContainer   : "",                //{UPDATED} Selector: USE CLASS SELECTOR. Declare which container the navigation elements should be appended too. Default container is the FlexSlider element. Example use would be ".flexslider-container". Property is ignored if given element is not found.
+        manualControls      : "",                //Selector: Declare custom control navigation. Examples would be ".flex-control-nav li" or "#tabs-nav li img", etc. The number of elements in your controlNav should match the number of slides/tabs.
+        sync                : "",                //{NEW} Selector: Mirror the actions performed on this slider with another slider. Use with care.
+        asNavFor            : "",                //{NEW} Selector: Internal property exposed for turning the slider into a thumbnail navigation for another slider
+    });
+
+    var page_dir_st = false;
+    if (page_dir == "rtl") {
+        page_dir_st = true;
+    } else {
+        page_dir_st = false;
+    }
+    jQuery("#owl-slider").owlCarousel({
+        items: 3,
+        autoplay: true,
+        rtl: page_dir_st,
+        autoplayTimeout: 3000,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+});
+
+
+$(window).on('load', function () {
+
+    // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    
+    
+        $(document).ready(function(){
+        
+        $('.mus-student').hide();
+    $('.student-field').hide();
+        
+        /* Conform Before Submit*/
+        
+    $('.submit').on('click', function() {
+        
+    
+    
+      
+     if($("#booking-form").valid()){
+     
+     $('#formconfirm').modal('show');	 
+     
+     }
+       
+       //if (confirm("Click OK to continue?")){
+         //    $('form#delete').submit();
+          //}
+          
+         
+          
+          
+    });
+    
+    $('.submit_form').on('click', function() {
+        
+        
+        
+    if($("#booking-form").valid()){
+     
+     $('#booking-form').submit();	 
+     
+     }
+        
+    });
+    
+    /** **/
+        
+    
+        /* Rate*/
+        if(document.querySelector("#booking-form")){
+    $adultrate=getrate($d='adult_rate',$t='indian',$m='Chennai');
+    $childrate=getrate($d='child_rate',$t='indian',$m='Chennai');
+    $studentrate=getrate($d='students_rate',$t='indian',$m='Chennai');
+    $stillcamera=getrate($d='scam_rate',$t='indian',$m='Chennai');
+    $vcamera=getrate($d='vcam_rate',$t='indian',$m='Chennai');          
+}        
+        $atotal=0;
+        $ctotal=0;
+        $stotal=0;
+        $scamtotal=0;
+        $vcamtotal=0;
+        $total=0;
+        
+        /* Rate*/
+        
+        
+    /* ===================== Nationallity  ================= */
+        
+    $('.nationality').on('change', function() {
+    ratereset();
+    $con= this.value ;
+    
+    
+    $museum_name = $('.museum').val();
+    
+    
+    
+    
+    if($con=='indian'){
+        
+    
+    
+    
+    
+    
+    $adultrate=getrate($d='adult_rate',$t=$con,$m=$museum_name);
+    $childrate=getrate($d='child_rate',$t=$con,$m=$museum_name);
+    $studentrate=getrate($d='students_rate',$t=$con,$m=$museum_name);
+    $stillcamera=getrate($d='scam_rate',$t=$con,$m=$museum_name);
+    $vcamera=getrate($d='vcam_rate',$t=$con,$m=$museum_name);	
+    
+    
+    
+    
+    
+    
+    ratereset();
+    
+    $('.country-field').hide();
+    $('.country').prop('disabled', true);
+    $('.state-field , .city-field').show();
+    }
+            
+            
+    else{
+            
+    
+    
+    $adultrate=getrate($d='adult_rate',$t=$con,$m=$museum_name);
+    $childrate=getrate($d='child_rate',$t=$con,$m=$museum_name);
+    $studentrate=getrate($d='students_rate',$t=$con,$m=$museum_name);
+    $stillcamera=getrate($d='scam_rate',$t=$con,$m=$museum_name);
+    $vcamera=getrate($d='vcam_rate',$t=$con,$m=$museum_name);	
+    
+    
+            
+        
+    
+    
+    
+    ratereset();
+    $('.country-field').show();
+    $('.country').prop('disabled', false);
+    $('.state , .city').val("");
+    $('.state-field').hide();
+    $('.city-field').hide();
+    
+    
+    $('.state-field , .city-field').prop('disabled', true);
+    }
+    });
+    
+    
+    
+        
+    /* ======= Audlt rate ========= */
+            
+    $('.mus-adult').on('change', function() {
+    
+    totalperson($(this));
+    
+    $(this).prevAll("label").find('span').text(' - Rs: '+$adultrate*this.value);
+    $atotal=$adultrate*this.value;
+    total();
+    
+    });
+    
+    
+    
+    /* ======= Child rate ========= */	
+    $('.mus-child').on('change', function() {
+        totalperson($(this));
+    $(this).prevAll("label").find('span').text(' - Rs: '+$childrate*this.value);
+    $ctotal=$childrate*this.value;
+    total();
+    });
+    
+    
+    
+    
+    /* ======= Student rate ========= */
+    $('.mus-student').on('change', function() {
+        totalperson($(this));
+    $(this).prevAll("label").find('span').text(' - Rs: '+$studentrate*this.value);
+    $stotal=$studentrate*this.value;
+    total();
+    });
+    
+    
+    
+    
+    /* ======= Still Camer rate ========= */
+        
+    $('.s-cam').on('change', function() {
+    $(this).prevAll("label").find('span').text(' - Rs: '+$stillcamera*this.value);
+    $scamtotal=$stillcamera*this.value;
+    total();
+    });
+    
+    /* ======= Video Camera rate ========= */
+    $('.v-cam').on('change', function() {
+    $(this).prevAll("label").find('span').text(' - Rs: '+$vcamera*this.value);
+    $vcamtotal=$vcamera*this.value;
+    total();
+    });
+    
+    
+        
+    /* ======= Visitdate ========= */
+    $('.visit-date').keypress(function(e) {
+        return false
+    });
+        
+    
+        
+        
+    /* ======= Museum Type ========= */ 
+        
+    $('.museum').on('change', function() {
+        
+    ratereset();		
+    
+    $('.visit-date').val('');
+    
+    $va = this.value 
+    $national=$('.nationality').val();
+    
+    
+    
+    $m_code = $(this).find(':selected').data('mcode')
+    $m_id = $(this).find(':selected').data('id')
+    $('.mcode').val($m_code);
+    $('.mid').val($m_id);
+    
+    
+    
+    
+        
+    if($va=='Chennai') {
+        
+    $adultrate=getrate($d='adult_rate',$t=$national,$m=$va);
+    $childrate=getrate($d='child_rate',$t=$national,$m=$va);
+    $studentrate=getrate($d='students_rate',$t=$national,$va);
+    $stillcamera=getrate($d='scam_rate',$t=$national,$m=$va);
+    $vcamera=getrate($d='vcam_rate',$t=$national,$m=$va);	
+    
+    
+    
+    //$('.av').show();
+    //$('.avil').text('');
+    //$('.ava_ticket').val(0);
+    
+    }
+        
+    else {
+    
+    $adultrate=getrate($d='adult_rate',$t=$national,$m=$va);
+    $childrate=getrate($d='child_rate',$t=$national,$m=$va);
+    $studentrate=getrate($d='students_rate',$t=$national,$m=$va);
+    $stillcamera=getrate($d='scam_rate',$t=$national,$m=$va);
+    $vcamera=getrate($d='vcam_rate',$t=$national,$m=$va);	
+    
+    
+    
+    //$('.av').hide();
+    //$('.ava_ticket').val(50000);	
+    
+    }
+    
+    
+    });
+        
+    /* ======= Visit Type ========= */	
+    
+    $('.visit-type').on('change', function() {
+    
+        
+    
+    $museum_name = $('.museum').val();
+    
+        
+    
+    $va= this.value 
+    
+    if($va=='institution'){
+    
+    $('.indname').show();	
+    $('.visit-type-name').html('<span class="text-danger">*</span> Institution Name');
+    
+    
+    $('.mus-student').prop('disabled', false);
+    $('.mus-student').show();
+    $('.student-field').show();
+    
+    $('.adult-field').find('label').html('<i class="text-danger">*</i> No. of Teachers / Adults <span class="a-rate"></span>');
+    $('.visitor-title').text('For Institution - Schools / Colleges');
+    
+    
+    $('.mus-child ').prop('disabled', true);
+    $('.mus-child ').hide();
+    $('.child-field').hide();
+    
+    total();
+    ratereset();
+    }
+      
+    else{
+        $('.visitor-title').text('No. of Visitors');
+    $('.indname').hide();
+    $('.visit-type-name').text('* Individual Name'); 
+    
+    $('.mus-student').prop('disabled', true);
+    $('.mus-student').hide();
+    $('.student-field').hide();
+    
+    
+    $('.mus-child ').prop('disabled', false);
+    $('.mus-child ').show();
+    $('.child-field').show();
+    
+    $('.adult-field').find('label').html('<i class="text-danger">*</i> No. of Adults <span class="a-rate"></span>');
+    
+    total();
+    ratereset();
+    }
+    });
+    
+    /* === Visit-date - Ticket Avaliblity ==== */
+    
+    $('.visit-date').on('change', function() {
+    
+    var dt = new Date();
+    
+    var start_time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+    var endtime="13:00:00";
+    
+    var endt = new Date((dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear() + " " + endtime);
+    
+    endt=endt.getTime();
+    
+    var time=dt.getTime();
+    
+    
+    
+    var current_date = dt.getFullYear()+"-"+('0'+(dt.getMonth()+1) ).slice( -2 ) + "-" +('0'+dt.getDate('D')).slice(-2); 
+    
+    
+    
+    if(current_date==this.value)
+    {    
+    if(time>=endt){  
+    alert ('Ticket Booking Time is over Today');
+    $('.visit-date').val('');
+    
+    }
+    }
+    
+    ratereset();
+    $museum=$('.museum').val();
+    
+    if($museum=='Chennai'){
+    
+    var datedatas = this.value;
+    var urls = 'dateaval/'+datedatas;	
+    
+    
+    /*Ajax Call */
+    $.ajax({
+    type: "get",
+    url: urls,
+    
+    success: function(datas)
+    {
+    
+    //$('.avil').text(datas+' Tickets Available');
+    
+    //$('.ava_ticket').val(datas);
+    
+    if(datas==0){
+    
+    //$('.visit-date').val('');
+    
+    }    
+      
+         }
+                   
+    });    
+    
+    /*End-ajax-call */	
+        
+    }
+    });
+        
+    /* --------------------- */
+        
+    /* Function */
+    /* ======= TOTAL Amount Function ========= */
+    
+    function total(){
+    $total=$atotal+$ctotal+$stotal+$scamtotal+$vcamtotal;
+    $('.total-amount').text('Rs  ' + $total);
+    $('.total-amount-field').val($total);
+    }
+        
+    /*======= Reset Function =========*/
+        
+    function resets(){
+    $atotal=0;
+    $ctotal=0;
+    $stotal=0;
+    $scamtotal=0;
+    $vcamtotal=0;
+    $total=0;
+    $('.a-rate').text('');	
+    $('.rate-part').val(0);	
+    $('.total-amount').text('Rs  ' + $total);
+    $('.total-amount-field').val($total);	
+    }
+           
+    /*===== Reset =======*/
+        
+    function ratereset(){
+    $atotal=0;
+    $ctotal=0;
+    $stotal=0;
+    $scamtotal=0;
+    $vcamtotal=0;
+    $total=0;
+    $('.a-rate').text('');
+    total();
+    $('.rate-part').val(0);	
+    }
+    
+    /*===== Get Rate =======*/
+    
+    function getrate($f,$t,$m){    
+        
+    var rates;
+    var datedatas = $f;
+    var types = $t;
+    var museum= $m;
+    
+    var urls = 'getrate/'+datedatas+'/'+types+'/'+museum;	
+    /*Ajax Call */
+    $.ajax({
+    type: "get",
+    async: false,
+    url: urls,
+    success: function(datas)
+    {
+        $totalprice = datas.match(/\d+/g)[0];
+        rates = $totalprice;    
+    
+    }
+                   
+    });
+    /*End-ajax-call */	        
+        return rates;        
+    }
+    
+    /* */    
+    
+    /*======= TOTAL Person Function Ticket Check =========*/
+    function totalperson($f){
+    
+    $a_total=parseInt($('.mus-adult').val());
+    $c_total=parseInt($('.mus-child').val());	
+    $s_total=parseInt($('.mus-student').val());
+    
+    var total=	$a_total+$c_total+$s_total;
+    var datedatas = $('.visit-date').val();
+    
+    if(!datedatas){
+    alert('Please Select Date');
+    
+    $('#datepicker').focus();
+    resets();
+    
+    }
+        
+    if($museum=='Chennai'){
+    var urls = 'dateaval/'+datedatas;
+    
+    /*Ajax Call */    
+    
+    $.ajax({
+    type: "get",
+    url: urls,    
+    
+    success: function(datas)
+    {
+    if(total<=datas){
+    }
+    
+    else{
+    //$f.val(0);
+    //alert('Sorry Only ' + datas + ' Tickets Available');
+    //resets();
+    }
+    }
+                   
+    });    
+    
+    /*End-ajax-call */	
+    
+    }   
+    }        
+    /*End of Functions */	
+           
+    /*Document end */   
+    
+    /*Print */
+    $('.print_btn').click(function(){
+         window.print();
+    });
+        
+    });

